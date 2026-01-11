@@ -1,0 +1,34 @@
+/dts-v1/;  //versão da sintaxe Device Tree
+/plugin/;  //indica que é um overlay
+
+/*
+ * Overlay para o driver mygpio
+ * Define 3 GPIOs de saída (LEDs)
+ * e 3 GPIOs de entrada (teclas)
+ */
+
+&gpio {
+    #gpio-cells = <2>;  // <gpio_number flags>
+};
+
+&{/} {
+    mygpio: mygpio {
+        compatible = "amauri,mygpio"; //associa ao driver
+		
+        /* Ordem dos GPIOs define o índice usado no driver */
+        gpios = <
+            &gpio 20 0     // index 0 → LED 1
+            &gpio 21 0      // index 1 → LED 2
+            &gpio 16 0       // index 2 → LED 3
+	        &gpio 26 0      // index 3 → Tecla 1
+	        &gpio 13 0      // index 4 → Tecla 2
+            &gpio 19 0      // index 5 → Tecla 3
+        >;
+
+        gpio-names = "gpio20", "gpio21", "gpio16", "gpio26", "gpio13", "gpio19";
+		
+		 /* Direção lógica de cada GPIO */
+        directions = "out", "out", "out", "in", "in", "in";
+    };
+};
+

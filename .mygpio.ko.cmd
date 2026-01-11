@@ -1,0 +1,1 @@
+savedcmd_/home/atuoni/projeto2/mygpio.ko := aarch64-linux-gnu-ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T arch/arm64/module.lds -o /home/atuoni/projeto2/mygpio.ko /home/atuoni/projeto2/mygpio.o /home/atuoni/projeto2/mygpio.mod.o /home/atuoni/projeto2/.module-common.o
