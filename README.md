@@ -49,10 +49,10 @@ The driver allows you to control the GPIOs on the Raspberry Pi in a generic way.
 
 The driver interacts with the hardware through the following functions:
 
-    gpio_request() → reserva o GPIO para o driver
-    gpio_direction() → define a direção do GPIO
-    gpio_get_value() / gpio_set_value() → lê e escreve valores
-    gpio_to_irq() → captura eventos no GPIO
+    gpio_request() → Reserve the GPIO for the driver.
+    gpio_direction() → defines the direction of the GPIO.
+    gpio_get_value() / gpio_set_value() → read and write values
+    gpio_to_irq() → Captures events on the GPIO.
 
 In the driver, the Device Tree is read in probe() using:
 
@@ -67,10 +67,10 @@ The driver registers a character device with:
     major → número principal do device (ex.: 236)
     mygpio_fops → estrutura que define funções que o app pode chamar:
 
-    .open  -->  abre o dispositivo
-    .release --> fecha o dispositivo
-    .unlocked_ioctl  --> Lê e escreve GPIOs via APP
-    .poll         --> Permite o APP esperar os eventos nas entradas
+    .open  -->  open the device
+    .release --> close the device
+    .unlocked_ioctl  --> Reads and writes GPIOs via APP.
+    .poll         --> Allows the app to wait for events at the inputs.
 
 Additionally, the driver automatically creates /dev/mygpio:
 
@@ -98,4 +98,4 @@ When the application is running in the terminal, the user activating SW1 turns o
 
 ## DEMONSTRATION VIDEO
 
-[![Watch the video.](https://i9.ytimg.com/vi_webp/j767Vno2sWc/mq1.webp?sqp=CNj8xMcG&rs=AOn4CLA35gouhf2GBEex7KSgODKhKKkQ0g)](https://youtu.be/j767Vno2sWc)
+[![Watch the video.](https://i.ytimg.com/an_webp/SFuYGhjP5fw/mqdefault_6s.webp?du=3000&sqp=CMiMkcsG&rs=AOn4CLCU3rtM4LuagC8opic7JR4njxSmoQ)](https://youtu.be/SFuYGhjP5fw)
