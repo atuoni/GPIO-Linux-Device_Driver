@@ -19,6 +19,7 @@ The device driver and the application for accessing the Raspberry's GPIO were de
 
 The LEDs and push-buttons needed to activate the driver were mounted on a breadboard and connected to the Raspberry Pi Zero 2W board, as can be seen in the electrical schematic in the Figure.
 
+<img src="Circuit Picture.png" alt="Circuit">  
 
 To enable the kernel to identify the GPIO pins used in the project, a Device Tree Overlay (.dts) file was developed with a declarative description of the hardware used.
 
