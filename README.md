@@ -99,3 +99,7 @@ When the application is running in the terminal, the user activating SW1 turns o
 ## DEMONSTRATION VIDEO
 
 [![Watch the video.](https://i9.ytimg.com/vi_webp/SFuYGhjP5fw/mqdefault.webp?v=69644396&sqp=CLSA59AG&rs=AOn4CLChl1bd5fjOKg2xwj9EOMPbls702w)](https://youtu.be/SFuYGhjP5fw)
+
+<a href="https://www.youtube.com/watch?v=SFuYGhjP5fw">
+    <img src="https://img.youtube.com/vi/SFuYGhjP5fw/default.jpg" width="300">
+</a>
